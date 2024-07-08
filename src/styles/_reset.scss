@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 @font-face{
@@ -20,5 +21,4 @@
 
 body{
     background-color: var.$corFundo;
-    font-family: Avenir, sans-serif;
 }
