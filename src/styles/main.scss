@@ -1,3 +1,6 @@
-body{
-    background-color: yellow;
-}
+@use 'reset.scss';
+@use 'var.scss';
+@use 'hero';
+
+
+
