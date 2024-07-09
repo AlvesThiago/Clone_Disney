@@ -2,6 +2,8 @@ $corFundo: #040714;
 $corTextoPrincipal: silver;
 $corTextoSecundario: #f9f9f9;
 $corFundoButton: #6421ff;
+$corButtonSecundary: #0063e5;
+$corButtonDark: #000;
 
 @mixin text($fontsize: 16px){
     font-size: $fontsize;
@@ -45,7 +47,9 @@ $corFundoButton: #6421ff;
 }
 
 .button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
@@ -54,9 +58,34 @@ $corFundoButton: #6421ff;
     text-transform: uppercase;
     border-radius: 4px;
     border: none;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
     cursor: pointer;
+    border: 1px solid $corFundoButton;
+
+    &:hover{
+        background-color: lighten($corFundoButton, 3%);
+    }
+
+    &--secundary{
+        background-color: $corButtonSecundary;
+        border-color: $corButtonSecundary;
+
+        &:hover{
+            background-color: lighten($corButtonSecundary, 3%);
+        }
+    }
+
+    &--dark{
+        background-color: rgba($corButtonDark, 0.8);
+        border-color: $corTextoSecundario;
+
+        &:hover{
+            background-color: $corTextoSecundario;
+            color: $corFundo;
+        }
+    }
 }
 
 .image-text-section{

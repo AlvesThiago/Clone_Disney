@@ -23,6 +23,11 @@
             max-width: 380px;
             width: 100%;
 
+            .button{
+                margin-top: 2vw;
+                margin-bottom: 8px;
+            }
+
             &:nth-child(2){
                 background-image: url(../images/fundo_combo_plus.png);
                 background-repeat: no-repeat;
