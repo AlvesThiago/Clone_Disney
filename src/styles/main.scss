@@ -9,3 +9,106 @@
 @use 'header';
 
 
+@media (max-width: var.$mobile){
+    .shows{
+        &__list{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__tabs{
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 20px;
+
+            &__button{
+                font-size: 16px;
+            }
+        }
+    }
+
+    .plans{
+        &__list{
+            display: block;
+        }
+
+        .button{
+            margin-top: 24px;
+        }
+    }
+
+    .image-text-section{
+        display: block;
+    }
+
+    .image-text-section--image-full-width{
+        &__text__container{
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    .available-devices{
+        &__list{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .faq{
+        &__questions{
+            &__item{
+                &__question{
+                    h4{
+                        font-size: 15px;
+                        max-width: 230px;
+                    }
+
+                    &::after{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero{
+        background-image: url('../images/hero_celular.jpeg');
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+
+        &__content{
+            &__branding{
+                max-width: 180px;
+            }
+
+            &__combos{
+                display: block;
+                
+                &__combo{
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .header{
+        &__container{
+            padding: 0 12px 0 20px; 
+        }
+
+        &__logo{
+            max-width: 64px;
+        }
+
+        .button{
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
+    }
+
+}

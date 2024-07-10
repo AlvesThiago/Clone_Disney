@@ -5,6 +5,8 @@ $corFundoButton: #6421ff;
 $corButtonSecundary: #0063e5;
 $corButtonDark: #000;
 
+$mobile: 768px;
+
 @mixin text($fontsize: 16px){
     font-size: $fontsize;
     line-height: $fontsize + 10px;
@@ -18,26 +20,50 @@ $corButtonDark: #000;
 
 .text--big{
     @include text(18px);
+
+    @media (max-width: $mobile){
+        @include text(15px);
+    }
 }
 
 .text{
     @include text;
+
+    @media (max-width: $mobile){
+        @include text(14px);
+    }
 }
 
 .text--small{
     @include text(12px);
+
+    @media (max-width: $mobile){
+        @include text(11px);
+    }
 }
 
 .title--big{
     @include title(44px);
+
+    @media (max-width: $mobile){
+        @include title(26px);
+    }
 }
 
 .title{
     @include title;
+
+    @media (max-width: $mobile){
+        @include title(24px);
+    }
 }
 
 .title--small{
     @include title(28px);
+
+    @media (max-width: $mobile){
+        @include title(22px);
+    }
 }
 
 .link-text{
