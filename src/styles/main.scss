@@ -8,6 +8,82 @@
 @use 'footer';
 @use 'header';
 
+@media(max-width: 1300px) {
+    .plans {
+        &__list {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            overflow-x: scroll;
+            scroll-snap-type:  none;
+            -webkit-overflow-scrolling: touch;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+        }
+
+        &__item {
+            width: 90%;
+        }
+    }
+}
+
+
+@media (max-width: var.$tablet){
+    .hero{
+        background-image: url('../images/hero_tablet.jpg');
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -80px;
+
+        &__content{
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .plans {
+        &__list {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            overflow-x: scroll;
+            scroll-snap-type:  none;
+            -webkit-overflow-scrolling: touch;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+        }
+
+        &__item {
+            width: 90%;
+        }
+    }
+
+    .available-devices{
+        &__list{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .image-text-section{
+        display: block;
+    }
+
+    .image-text-section--image-full-width{
+        &__text__container{
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
 
 @media (max-width: var.$mobile){
     .shows{
@@ -17,8 +93,14 @@
 
         &__tabs{
             white-space: nowrap;
-            overflow-x: scroll;
             padding-left: 20px;
+            overflow-x: scroll;
+            scroll-snap-type:  none;
+            -webkit-overflow-scrolling: touch;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
 
             &__button{
                 font-size: 16px;
@@ -28,7 +110,10 @@
 
     .plans{
         &__list{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;          
         }
 
         .button{
@@ -110,5 +195,5 @@
             letter-spacing: 0;
         }
     }
-
 }
+
